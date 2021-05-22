@@ -9,9 +9,8 @@ module.exports = async function App() {
 
   const makeRequest = async () => { 
     try {
-    const response = await axios.get('http://localhost:8000/api/jumlah-peserta');
+    const response = await axios.get(process.env.API_URL);
     if (response.status === 200) { // response - object, eg { status: 200, message: 'OK' }
-      console.log('success stuff');
      return response.data;
     }
     return false;
