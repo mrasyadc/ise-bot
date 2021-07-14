@@ -7,9 +7,17 @@ module.exports = async function App() {
   ]);
 }
 
-  const makeRequest = async () => { 
+const headers = {
+  'access-key': process.env.ACCESS_KEY
+}
+
+const postData = {
+  password: process.env.PASSWORD
+}
+
+const makeRequest = async () => { 
     try {
-    const response = await axios.get(process.env.API_URL);
+    const response = await axios.post(process.env.API_URL, postData ,{headers: headers});
     if (response.status === 200) { // response - object, eg { status: 200, message: 'OK' }
      return response.data;
     }
