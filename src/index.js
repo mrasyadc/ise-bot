@@ -37,7 +37,7 @@ async function HandleMessage(context) {
         const sendData = await data.bionix;
         const bionixJunior = await sendData.junior;
         const bionixSenior = await sendData.senior;
-        await context.sendText(`Statistik Peserta ISE 2021:\nBIONIX\na.\tjunior:${bionixJunior}\nb.\tsenior:${bionixSenior}\ntotal:${bionixJunior+bionixSenior}`)
+        await context.sendText(`Statistik Peserta ISE 2021:\nBIONIX\na.\tjunior: ${bionixJunior}\nb.\tsenior: ${bionixSenior}\ntotal:${bionixJunior+bionixSenior}`)
     } else {
       await context.sendText(`Mohon maaf server sedang maintenance`)
     }
