@@ -1,3 +1,8 @@
+## Command Yang Ada
+
+- `/info` chat akan mereply dengan jumlah statistik pendaftar ISE 2021!
+-----
+
 This project was bootstrapped with
 [Bottender](https://github.com/Yoctol/bottender) init script.
 
