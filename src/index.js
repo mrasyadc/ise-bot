@@ -34,6 +34,7 @@ async function HandleMessage(context) {
     if (context.event.text.toLowerCase() === '/info') {
       const data = await makeRequest();
       if (data) {
+<<<<<<< HEAD
         const sendData = await data;
 
         const timestamp = await sendData.timestamp;
@@ -327,6 +328,12 @@ async function HandleMessage(context) {
         }
           
           )
+=======
+        const sendData = await data.bionix;
+        const bionixJunior = await sendData.junior;
+        const bionixSenior = await sendData.senior;
+        await context.sendText(`Statistik Peserta ISE 2021:\nBIONIX\na.\tStudent: ${bionixJunior}\nb.\tCollege: ${bionixSenior}\ntotal: ${bionixJunior+bionixSenior}`)
+>>>>>>> becc899de68120b75830968c71668e0a5d9437fc
     } else {
       await context.sendText(`Mohon maaf server sedang maintenance`)
     }
