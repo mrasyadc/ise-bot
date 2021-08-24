@@ -28,6 +28,19 @@ const makeRequest = async () => {
    }
 }
 
+const foto = [
+  'https://ik.imagekit.io/mrasyadc/cfa0d6ace25e886b938e2229846a6ffe4_21429761_210824_swacWZfFr.jpg?updatedAt=1629788527868', 
+  'https://ik.imagekit.io/mrasyadc/cfa0d6ace25e886b938e2229846a6ffe4_21429761_210824_0_ilBvWmEUF.jpg?updatedAt=1629789133629'
+]
+
+const semangat = [
+  'semangat ya', 
+  'keren deh kamu', 
+  'semangat terus beb',
+  'jangan menyerah', 
+  'semangat kamu',
+  'miss u so much semangat ya'
+]
 
 async function HandleMessage(context) {
   if (context.event.isText) {
@@ -330,6 +343,17 @@ async function HandleMessage(context) {
     } else {
       await context.sendText(`Mohon maaf server sedang maintenance`)
     }
+    } else if (context.event.text.toLowerCase() === '/foto') {
+
+      const send_foto = foto[Math.floor(Math.random() * foto.length)];
+      await context.sendImage({
+        originalContentUrl: send_foto,
+        previewImageUrl: send_foto,
+      });
+    } else if (context.event.text.toLowerCase() === '/capek') {
+
+      const send_semangat = semangat[Math.floor(Math.random() * semangat.length)];
+      await context.sendText(send_semangat)
     }
   }
 }
