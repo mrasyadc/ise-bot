@@ -1,6 +1,8 @@
 ## Command Yang Ada
 
 - `/info` chat akan mereply dengan jumlah statistik pendaftar ISE 2021!
+- `/foto` chat akan mereply dengan foto panitia ISE 2021!
+- `/capek` chat akan mereply dengan kata-kata penyemangat panitia ISE 2021!
 -----
 
 This project was bootstrapped with
