@@ -216,6 +216,29 @@ async function HandleMessage(context) {
                         "flex": 5
                       }
                     ]
+                  },
+                  {
+                    "type": "box",
+                    "layout": "baseline",
+                    "spacing": "sm",
+                    "contents": [
+                      {
+                        "type": "text",
+                        "text": "Total Tim",
+                        "color": "#aaaaaa",
+                        "size": "sm",
+                        "flex": 5,
+                        "wrap": true
+                      },
+                      {
+                        "type": "text",
+                        "text": String(tim.icon.academy.startup + tim.icon.academy['data-science'] + tim.bionix.junior + tim.bionix.senior),
+                        "wrap": true,
+                        "color": "#666666",
+                        "size": "sm",
+                        "flex": 5
+                      }
+                    ]
                   }
                 ]
               },
@@ -326,6 +349,29 @@ async function HandleMessage(context) {
                       {
                         "type": "text",
                         "text": String(peserta.icon.academy.startup),
+                        "wrap": true,
+                        "color": "#666666",
+                        "size": "sm",
+                        "flex": 5
+                      }
+                    ]
+                  },
+                  {
+                    "type": "box",
+                    "layout": "baseline",
+                    "spacing": "sm",
+                    "contents": [
+                      {
+                        "type": "text",
+                        "text": "Total Peserta",
+                        "color": "#aaaaaa",
+                        "size": "sm",
+                        "flex": 5,
+                        "wrap": true
+                      },
+                      {
+                        "type": "text",
+                        "text": String(peserta.icon.academy.startup + peserta.icon.academy['data-science'] + peserta.bionix.junior + peserta.bionix.senior),
                         "wrap": true,
                         "color": "#666666",
                         "size": "sm",
