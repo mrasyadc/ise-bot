@@ -180,7 +180,7 @@ async function HandleMessage(context) {
                     "contents": [
                       {
                         "type": "text",
-                        "text": "Payment Verified",
+                        "text": "Paid",
                         "color": "#aaaaaa",
                         "size": "sm",
                         "flex": 5,
@@ -204,7 +204,7 @@ async function HandleMessage(context) {
                     "contents": [
                       {
                         "type": "text",
-                        "text": "Payment + Profile",
+                        "text": "Paid + Profile",
                         "color": "#aaaaaa",
                         "size": "sm",
                         "flex": 5,
@@ -213,6 +213,54 @@ async function HandleMessage(context) {
                       {
                         "type": "text",
                         "text": String(tim.bionix.junior.bayar + tim.bionix.junior.profil - tim.bionix.junior.total), //data bayar + profil
+                        "wrap": true,
+                        "color": "#666666",
+                        "size": "sm",
+                        "flex": 5
+                      }
+                    ]
+                  },
+                  {
+                    "type": "box",
+                    "layout": "baseline",
+                    "spacing": "sm",
+                    "paddingStart": "xl",
+                    "contents": [
+                      {
+                        "type": "text",
+                        "text": "Belum Paid",
+                        "color": "#aaaaaa",
+                        "size": "sm",
+                        "flex": 5,
+                        "wrap": true
+                      },
+                      {
+                        "type": "text",
+                        "text": String(tim.bionix.junior.total - tim.bionix.junior.bayar), //belum bayar
+                        "wrap": true,
+                        "color": "#666666",
+                        "size": "sm",
+                        "flex": 5
+                      }
+                    ]
+                  },
+                  {
+                    "type": "box",
+                    "layout": "baseline",
+                    "spacing": "sm",
+                    "paddingStart": "xl",
+                    "contents": [
+                      {
+                        "type": "text",
+                        "text": "Paid + Profile",
+                        "color": "#aaaaaa",
+                        "size": "sm",
+                        "flex": 5,
+                        "wrap": true
+                      },
+                      {
+                        "type": "text",
+                        "text": String(tim.bionix.junior.total - tim.bionix.junior.profil), //belum  + profil
                         "wrap": true,
                         "color": "#666666",
                         "size": "sm",
