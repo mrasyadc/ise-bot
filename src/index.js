@@ -520,6 +520,8 @@ async function HandleMessage(context) {
 
       const send_semangat = semangat[Math.floor(Math.random() * semangat.length)];
       await context.sendText(send_semangat)
+    } else if (context.event.text.toLowerCase() === '/devita') {
+      await context.sendText("semangat ya kk canteeqq!")
     }
   }
 }
