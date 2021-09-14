@@ -152,6 +152,54 @@ async function HandleMessage(context) {
                     "type": "box",
                     "layout": "baseline",
                     "spacing": "sm",
+                    "paddingStart": "xl",
+                    "contents": [
+                      {
+                        "type": "text",
+                        "text": "Sudah Verifikasi",
+                        "color": "#aaaaaa",
+                        "size": "sm",
+                        "flex": 5,
+                        "wrap": true
+                      },
+                      {
+                        "type": "text",
+                        "text": "101", //data verifikasi
+                        "wrap": true,
+                        "color": "#666666",
+                        "size": "sm",
+                        "flex": 5
+                      }
+                    ]
+                  },
+                  {
+                    "type": "box",
+                    "layout": "baseline",
+                    "spacing": "sm",
+                    "paddingStart": "xl",
+                    "contents": [
+                      {
+                        "type": "text",
+                        "text": "Sudah Bayar",
+                        "color": "#aaaaaa",
+                        "size": "sm",
+                        "flex": 5,
+                        "wrap": true
+                      },
+                      {
+                        "type": "text",
+                        "text": "101", //data bayar
+                        "wrap": true,
+                        "color": "#666666",
+                        "size": "sm",
+                        "flex": 5
+                      }
+                    ]
+                  },
+                  {
+                    "type": "box",
+                    "layout": "baseline",
+                    "spacing": "sm",
                     "contents": [
                       {
                         "type": "text",
