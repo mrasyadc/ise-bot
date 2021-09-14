@@ -252,7 +252,7 @@ async function HandleMessage(context) {
                     "contents": [
                       {
                         "type": "text",
-                        "text": "Paid + Profile",
+                        "text": "Belum Profile",
                         "color": "#aaaaaa",
                         "size": "sm",
                         "flex": 5,
