@@ -140,7 +140,7 @@ async function HandleMessage(context) {
                       },
                       {
                         "type": "text",
-                        "text": String(tim.bionix.junior),
+                        "text": String(tim.bionix.junior.total),
                         "wrap": true,
                         "color": "#666666",
                         "size": "sm",
@@ -156,7 +156,7 @@ async function HandleMessage(context) {
                     "contents": [
                       {
                         "type": "text",
-                        "text": "Sudah Verifikasi",
+                        "text": "Profile Verified",
                         "color": "#aaaaaa",
                         "size": "sm",
                         "flex": 5,
@@ -164,7 +164,7 @@ async function HandleMessage(context) {
                       },
                       {
                         "type": "text",
-                        "text": "101", //data verifikasi
+                        "text": String(tim.bionix.junior.profil), //data verifikasi
                         "wrap": true,
                         "color": "#666666",
                         "size": "sm",
@@ -180,7 +180,7 @@ async function HandleMessage(context) {
                     "contents": [
                       {
                         "type": "text",
-                        "text": "Sudah Bayar",
+                        "text": "Payment Verified",
                         "color": "#aaaaaa",
                         "size": "sm",
                         "flex": 5,
@@ -188,7 +188,31 @@ async function HandleMessage(context) {
                       },
                       {
                         "type": "text",
-                        "text": "101", //data bayar
+                        "text": String(tim.bionix.junior.bayar), //data bayar
+                        "wrap": true,
+                        "color": "#666666",
+                        "size": "sm",
+                        "flex": 5
+                      }
+                    ]
+                  },
+                  {
+                    "type": "box",
+                    "layout": "baseline",
+                    "spacing": "sm",
+                    "paddingStart": "xl",
+                    "contents": [
+                      {
+                        "type": "text",
+                        "text": "Payment + Profile",
+                        "color": "#aaaaaa",
+                        "size": "sm",
+                        "flex": 5,
+                        "wrap": true
+                      },
+                      {
+                        "type": "text",
+                        "text": String(tim.bionix.junior.bayar + tim.bionix.junior.profil - tim.bionix.junior.total), //data bayar + profil
                         "wrap": true,
                         "color": "#666666",
                         "size": "sm",
@@ -280,7 +304,7 @@ async function HandleMessage(context) {
                       },
                       {
                         "type": "text",
-                        "text": String(tim.icon.academy.startup + tim.icon.academy['data-science'] + tim.bionix.junior + tim.bionix.senior),
+                        "text": String(tim.icon.academy.startup + tim.icon.academy['data-science'] + tim.bionix.junior.total + tim.bionix.senior),
                         "wrap": true,
                         "color": "#666666",
                         "size": "sm",
