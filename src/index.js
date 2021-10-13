@@ -483,6 +483,29 @@ async function HandleMessage(context) {
                     "contents": [
                       {
                         "type": "text",
+                        "text": "Icon Talkshow",
+                        "color": "#aaaaaa",
+                        "size": "sm",
+                        "flex": 5,
+                        "wrap": true
+                      },
+                      {
+                        "type": "text",
+                        "text": String(10000), //need api
+                        "wrap": true,
+                        "color": "#666666",
+                        "size": "sm",
+                        "flex": 5
+                      }
+                    ]
+                  },
+                  {
+                    "type": "box",
+                    "layout": "baseline",
+                    "spacing": "sm",
+                    "contents": [
+                      {
+                        "type": "text",
                         "text": "Total Peserta",
                         "color": "#aaaaaa",
                         "size": "sm",
