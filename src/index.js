@@ -491,7 +491,7 @@ async function HandleMessage(context) {
                       },
                       {
                         "type": "text",
-                        "text": String(10000), //need api
+                        "text": String(peserta.icon.talkshow), //done api
                         "wrap": true,
                         "color": "#666666",
                         "size": "sm",
