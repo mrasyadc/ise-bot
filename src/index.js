@@ -583,7 +583,7 @@ async function HandleMessage(context) {
                       },
                       {
                         "type": "text",
-                        "text": String(peserta.icon.academy.startup + peserta.icon.academy['data-science'] + peserta.bionix.junior + peserta.bionix.senior + peserta.icon.talkshow + peserta.icon.jobfair.member),
+                        "text": String(peserta.icon.academy.startup + peserta.icon.academy['data-science'] + peserta.bionix.junior + peserta.bionix.senior + peserta.icon.talkshow + peserta.icon.jobfair.member ?? 0),
                         "wrap": true,
                         "color": "#666666",
                         "size": "sm",
