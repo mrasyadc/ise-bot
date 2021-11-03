@@ -506,6 +506,75 @@ async function HandleMessage(context) {
                     "contents": [
                       {
                         "type": "text",
+                        "text": "Icon Jobfair",
+                        "color": "#aaaaaa",
+                        "size": "sm",
+                        "flex": 5,
+                        "wrap": true
+                      },
+                      {
+                        "type": "text",
+                        "text": String(peserta.icon.jobfair.member), //done api
+                        "wrap": true,
+                        "color": "#666666",
+                        "size": "sm",
+                        "flex": 5
+                      }
+                    ]
+                  },
+                  {
+                    "type": "box",
+                    "layout": "baseline",
+                    "spacing": "sm",
+                    "contents": [
+                      {
+                        "type": "text",
+                        "text": "Icon Job Apply",
+                        "color": "#aaaaaa",
+                        "size": "sm",
+                        "flex": 5,
+                        "wrap": true
+                      },
+                      {
+                        "type": "text",
+                        "text": String(peserta.icon.jobfair.apply), //done api
+                        "wrap": true,
+                        "color": "#666666",
+                        "size": "sm",
+                        "flex": 5
+                      }
+                    ]
+                  },
+                  {
+                    "type": "box",
+                    "layout": "baseline",
+                    "spacing": "sm",
+                    "contents": [
+                      {
+                        "type": "text",
+                        "text": "Icon Job Bookmark",
+                        "color": "#aaaaaa",
+                        "size": "sm",
+                        "flex": 5,
+                        "wrap": true
+                      },
+                      {
+                        "type": "text",
+                        "text": String(peserta.icon.jobfair.bookmark), //done api
+                        "wrap": true,
+                        "color": "#666666",
+                        "size": "sm",
+                        "flex": 5
+                      }
+                    ]
+                  },
+                  {
+                    "type": "box",
+                    "layout": "baseline",
+                    "spacing": "sm",
+                    "contents": [
+                      {
+                        "type": "text",
                         "text": "Total Peserta",
                         "color": "#aaaaaa",
                         "size": "sm",
@@ -514,7 +583,7 @@ async function HandleMessage(context) {
                       },
                       {
                         "type": "text",
-                        "text": String(peserta.icon.academy.startup + peserta.icon.academy['data-science'] + peserta.bionix.junior + peserta.bionix.senior),
+                        "text": String(peserta.icon.academy.startup + peserta.icon.academy['data-science'] + peserta.bionix.junior + peserta.bionix.senior + peserta.icon.talkshow + peserta.icon.jobfair.member),
                         "wrap": true,
                         "color": "#666666",
                         "size": "sm",
