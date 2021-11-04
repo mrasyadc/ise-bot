@@ -55,23 +55,8 @@ async function HandleMessage(context) {
         const tim = await sendData.tim;
         const peserta = await sendData.peserta;
 
-        // await console.table(tim);
-        // await console.table(peserta);
-
         await context.sendFlex("Statistik ISE 2021", {
           "type": "bubble",
-          // "hero": {
-          //   "type": "image",
-          //   "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_1_cafe.png",
-          //   "size": "full",
-          //   "aspectRatio": "20:13",
-          //   "aspectMode": "cover",
-          //   "action": {
-          //     "type": "uri",
-          //     "uri": "http://linecorp.com/"
-          //   },
-          //   "align": "center"
-          // },
           "body": {
             "type": "box",
             "layout": "vertical",
@@ -119,249 +104,29 @@ async function HandleMessage(context) {
                 ],
                 "margin": "md"
               },
-              // {
-              //   "type": "box",
-              //   "layout": "vertical",
-              //   "margin": "lg",
-              //   "spacing": "sm",
-              //   "contents": [
-              //     {
-              //       "type": "box",
-              //       "layout": "baseline",
-              //       "spacing": "sm",
-              //       "contents": [
-              //         {
-              //           "type": "text",
-              //           "text": "Bionix Student",
-              //           "color": "#aaaaaa",
-              //           "size": "sm",
-              //           "flex": 5,
-              //           "wrap": true
-              //         },
-              //         {
-              //           "type": "text",
-              //           "text": String(tim.bionix.junior.total),
-              //           "wrap": true,
-              //           "color": "#666666",
-              //           "size": "sm",
-              //           "flex": 5
-              //         }
-              //       ]
-              //     },
-              //     {
-              //       "type": "box",
-              //       "layout": "baseline",
-              //       "spacing": "sm",
-              //       "paddingStart": "xl",
-              //       "contents": [
-              //         {
-              //           "type": "text",
-              //           "text": "Profile Verified",
-              //           "color": "#aaaaaa",
-              //           "size": "sm",
-              //           "flex": 5,
-              //           "wrap": true
-              //         },
-              //         {
-              //           "type": "text",
-              //           "text": String(tim.bionix.junior.profil), //data verifikasi
-              //           "wrap": true,
-              //           "color": "#666666",
-              //           "size": "sm",
-              //           "flex": 5
-              //         }
-              //       ]
-              //     },
-              //     {
-              //       "type": "box",
-              //       "layout": "baseline",
-              //       "spacing": "sm",
-              //       "paddingStart": "xl",
-              //       "contents": [
-              //         {
-              //           "type": "text",
-              //           "text": "Paid",
-              //           "color": "#aaaaaa",
-              //           "size": "sm",
-              //           "flex": 5,
-              //           "wrap": true
-              //         },
-              //         {
-              //           "type": "text",
-              //           "text": String(tim.bionix.junior.bayar), //data bayar
-              //           "wrap": true,
-              //           "color": "#666666",
-              //           "size": "sm",
-              //           "flex": 5
-              //         }
-              //       ]
-              //     },
-              //     {
-              //       "type": "box",
-              //       "layout": "baseline",
-              //       "spacing": "sm",
-              //       "paddingStart": "xl",
-              //       "contents": [
-              //         {
-              //           "type": "text",
-              //           "text": "Paid + Profile",
-              //           "color": "#aaaaaa",
-              //           "size": "sm",
-              //           "flex": 5,
-              //           "wrap": true
-              //         },
-              //         {
-              //           "type": "text",
-              //           "text": String(tim.bionix.junior.bayar + tim.bionix.junior.profil - tim.bionix.junior.total), //data bayar + profil
-              //           "wrap": true,
-              //           "color": "#666666",
-              //           "size": "sm",
-              //           "flex": 5
-              //         }
-              //       ]
-              //     },
-              //     {
-              //       "type": "box",
-              //       "layout": "baseline",
-              //       "spacing": "sm",
-              //       "paddingStart": "xl",
-              //       "contents": [
-              //         {
-              //           "type": "text",
-              //           "text": "Belum Paid",
-              //           "color": "#aaaaaa",
-              //           "size": "sm",
-              //           "flex": 5,
-              //           "wrap": true
-              //         },
-              //         {
-              //           "type": "text",
-              //           "text": String(tim.bionix.junior.total - tim.bionix.junior.bayar), //belum bayar
-              //           "wrap": true,
-              //           "color": "#666666",
-              //           "size": "sm",
-              //           "flex": 5
-              //         }
-              //       ]
-              //     },
-              //     {
-              //       "type": "box",
-              //       "layout": "baseline",
-              //       "spacing": "sm",
-              //       "paddingStart": "xl",
-              //       "contents": [
-              //         {
-              //           "type": "text",
-              //           "text": "Belum Profile",
-              //           "color": "#aaaaaa",
-              //           "size": "sm",
-              //           "flex": 5,
-              //           "wrap": true
-              //         },
-              //         {
-              //           "type": "text",
-              //           "text": String(tim.bionix.junior.total - tim.bionix.junior.profil), //belum  + profil
-              //           "wrap": true,
-              //           "color": "#666666",
-              //           "size": "sm",
-              //           "flex": 5
-              //         }
-              //       ]
-              //     },
-              //     {
-              //       "type": "box",
-              //       "layout": "baseline",
-              //       "spacing": "sm",
-              //       "contents": [
-              //         {
-              //           "type": "text",
-              //           "text": "Bionix College",
-              //           "color": "#aaaaaa",
-              //           "size": "sm",
-              //           "flex": 5,
-              //           "wrap": true
-              //         },
-              //         {
-              //           "type": "text",
-              //           "text": String(tim.bionix.senior),
-              //           "wrap": true,
-              //           "color": "#666666",
-              //           "size": "sm",
-              //           "flex": 5
-              //         }
-              //       ]
-              //     },
-              //     {
-              //       "type": "box",
-              //       "layout": "baseline",
-              //       "spacing": "sm",
-              //       "contents": [
-              //         {
-              //           "type": "text",
-              //           "text": "Icon Data Science",
-              //           "color": "#aaaaaa",
-              //           "size": "sm",
-              //           "flex": 5,
-              //           "wrap": true
-              //         },
-              //         {
-              //           "type": "text",
-              //           "text": String(tim.icon.academy['data-science']),
-              //           "wrap": true,
-              //           "color": "#666666",
-              //           "size": "sm",
-              //           "flex": 5
-              //         }
-              //       ]
-              //     },
-              //     {
-              //       "type": "box",
-              //       "layout": "baseline",
-              //       "spacing": "sm",
-              //       "contents": [
-              //         {
-              //           "type": "text",
-              //           "text": "Icon Startup",
-              //           "color": "#aaaaaa",
-              //           "size": "sm",
-              //           "flex": 5,
-              //           "wrap": true
-              //         },
-              //         {
-              //           "type": "text",
-              //           "text": String(tim.icon.academy.startup),
-              //           "wrap": true,
-              //           "color": "#666666",
-              //           "size": "sm",
-              //           "flex": 5
-              //         }
-              //       ]
-              //     },
+              {
+                "type": "box",
+                "layout": "baseline",
+                "spacing": "sm",
+                "contents": [
                   {
-                    "type": "box",
-                    "layout": "baseline",
-                    "spacing": "sm",
-                    "contents": [
-                      {
-                        "type": "text",
-                        "text": "Total Tim",
-                        "color": "#aaaaaa",
-                        "size": "sm",
-                        "flex": 5,
-                        "wrap": true
-                      },
-                      {
-                        "type": "text",
-                        "text": String(tim.icon.academy.startup + tim.icon.academy['data-science'] + tim.bionix.junior.total + tim.bionix.senior),
-                        "wrap": true,
-                        "color": "#666666",
-                        "size": "sm",
-                        "flex": 5
-                      },
-                  //   ]
-                  // }
-              //   ]
-              // },
+                    "type": "text",
+                    "text": "Total Tim",
+                    "color": "#aaaaaa",
+                    "size": "sm",
+                    "flex": 5,
+                    "wrap": true
+                  },
+                  {
+                    "type": "text",
+                    "text": String(tim.icon.academy.startup + tim.icon.academy['data-science'] + tim.bionix.junior.total + tim.bionix.senior),
+                    "wrap": true,
+                    "color": "#666666",
+                    "size": "sm",
+                    "flex": 5
+                  }
+                ],
+              },
               {
                 "type": "box",
                 "layout": "baseline",
@@ -384,98 +149,6 @@ async function HandleMessage(context) {
                 "margin": "lg",
                 "spacing": "sm",
                 "contents": [
-                  // {
-                  //   "type": "box",
-                  //   "layout": "baseline",
-                  //   "spacing": "sm",
-                  //   "contents": [
-                  //     {
-                  //       "type": "text",
-                  //       "text": "Bionix Student",
-                  //       "color": "#aaaaaa",
-                  //       "size": "sm",
-                  //       "flex": 5,
-                  //       "wrap": true
-                  //     },
-                  //     {
-                  //       "type": "text",
-                  //       "text": String(peserta.bionix.junior),
-                  //       "wrap": true,
-                  //       "color": "#666666",
-                  //       "size": "sm",
-                  //       "flex": 5
-                  //     }
-                  //   ]
-                  // },
-                  // {
-                  //   "type": "box",
-                  //   "layout": "baseline",
-                  //   "spacing": "sm",
-                  //   "contents": [
-                  //     {
-                  //       "type": "text",
-                  //       "text": "Bionix College",
-                  //       "color": "#aaaaaa",
-                  //       "size": "sm",
-                  //       "flex": 5,
-                  //       "wrap": true
-                  //     },
-                  //     {
-                  //       "type": "text",
-                  //       "text": String(peserta.bionix.senior),
-                  //       "wrap": true,
-                  //       "color": "#666666",
-                  //       "size": "sm",
-                  //       "flex": 5
-                  //     }
-                  //   ]
-                  // },
-                  // {
-                  //   "type": "box",
-                  //   "layout": "baseline",
-                  //   "spacing": "sm",
-                  //   "contents": [
-                  //     {
-                  //       "type": "text",
-                  //       "text": "Icon Data Science",
-                  //       "color": "#aaaaaa",
-                  //       "size": "sm",
-                  //       "flex": 5,
-                  //       "wrap": true
-                  //     },
-                  //     {
-                  //       "type": "text",
-                  //       "text": String(peserta.icon.academy['data-science']),
-                  //       "wrap": true,
-                  //       "color": "#666666",
-                  //       "size": "sm",
-                  //       "flex": 5
-                  //     }
-                  //   ]
-                  // },
-                  // {
-                  //   "type": "box",
-                  //   "layout": "baseline",
-                  //   "spacing": "sm",
-                  //   "contents": [
-                  //     {
-                  //       "type": "text",
-                  //       "text": "Icon Startup",
-                  //       "color": "#aaaaaa",
-                  //       "size": "sm",
-                  //       "flex": 5,
-                  //       "wrap": true
-                  //     },
-                  //     {
-                  //       "type": "text",
-                  //       "text": String(peserta.icon.academy.startup),
-                  //       "wrap": true,
-                  //       "color": "#666666",
-                  //       "size": "sm",
-                  //       "flex": 5
-                  //     }
-                  //   ]
-                  // },
                   {
                     "type": "box",
                     "layout": "baseline",
@@ -617,10 +290,7 @@ async function HandleMessage(context) {
                 ]
               }
             ]
-          }
-        }
-          
-          )
+          }})
     } else {
       await context.sendText(`Mohon maaf server sedang maintenance`)
     }
