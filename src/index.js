@@ -102,7 +102,7 @@ async function HandleMessage(context) {
                     "flex": 0
                   }
                 ],
-                "margin": "md"
+                "margin": "lg",
               },
               {
                 "type": "box",
