@@ -108,6 +108,7 @@ async function HandleMessage(context) {
                 "type": "box",
                 "layout": "baseline",
                 "spacing": "sm",
+                "margin": "lg",
                 "contents": [
                   {
                     "type": "text",
